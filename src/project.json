@@ -1,0 +1,8 @@
+{
+  "name": "web-components-demo",
+  "title": "Web Components Demo",
+  "description": "Experiments created with Web Components",
+  "themeColor": "#ffffff",
+  "backgroundColor": "#ffffff",
+  "isPwa": false
+}
