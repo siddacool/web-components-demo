@@ -59,18 +59,4 @@ calc-screen {
     height: 100px;
     padding: 0;
   }
-
-  .screen__view--top {
-    font-size: 2rem;
-    font-weight: 600;
-    height: 60px;
-    overflow-x: auto;
-    text-align: right;
-  }
-
-  .screen__view--bottom {
-    font-weight: 600;
-    overflow-x: auto;
-    text-align: right;
-  }
 }

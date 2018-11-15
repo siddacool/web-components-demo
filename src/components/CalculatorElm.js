@@ -30,8 +30,12 @@ class Calculator extends WebcomponentMaster {
     return ['val'];
   }
 
-  modifyValue(val) {
-    this.state.val = val;
+  modifyValue(valNew) {
+    this.state.val = valNew;
+    const { val } = this.state;
+    const screen = this.querySelector('calc-screen');
+
+    screen.setAttribute('val', val);
   }
 
   updateScreen() {
@@ -52,31 +56,24 @@ class Calculator extends WebcomponentMaster {
         let { val } = this.state;
         val += target.innerText;
         this.modifyValue(val);
-        this.updateScreen();
       } else if (target.classList.contains('btn--del')) {
         let { val } = this.state;
         val = val.slice(0, -1);
         this.modifyValue(val);
-        this.updateScreen();
       } else if (target.classList.contains('btn--equal')) {
         let { val } = this.state;
         val = addbits(val);
         this.modifyValue(val);
-        this.updateScreen();
       } else if (target.classList.contains('btn--clear')) {
         this.modifyValue('');
-        this.updateScreen();
       }
     }
   }
 
   connectedCallback() {
-    const { digitArr, calcArr } = this.state;
+    const { digitArr, calcArr, val } = this.state;
     this.innerHTML = `
-      <calc-screen>
-        <div class="screen__view--top"></div>
-        <div class="screen__view--bottom"></div>
-      </calc-screen>
+      <calc-screen val="${val}"></calc-screen>
       <div class="btn-grp">
         <div class="btn-grp__digit">
           ${digitArr.map(d => `<a href="#" class="btn btn--digit">${d}</a>`).join('')}
