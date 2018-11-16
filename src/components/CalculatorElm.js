@@ -1,3 +1,4 @@
+import * as math from 'mathjs';
 import WebcomponentMaster from './WebcomponentMaster';
 import './CalcScreen';
 
@@ -14,6 +15,35 @@ function addbits(s) {
   }
 
   return toReturn.toString();
+}
+
+function calcStringController(s) {
+  let str = s;
+  let evalStr = '';
+  const splitString = str.split('');
+  const last = splitString[splitString.length - 1];
+  const parseLast = parseInt(last, 10) || last === '0';
+
+  if (!parseLast) {
+    str = str.slice(0, -1);
+  }
+
+  if (str !== '') {
+    evalStr = str.toString();
+  }
+
+  return evalStr;
+}
+
+function calcStringEval(s) {
+  let evalStr = '';
+
+  if (s !== '') {
+    evalStr = math.eval(s);
+    evalStr = evalStr.toString();
+  }
+
+  return evalStr;
 }
 
 class Calculator extends WebcomponentMaster {
@@ -52,17 +82,8 @@ class Calculator extends WebcomponentMaster {
     const { val } = this.state;
     const screen = this.shadowRoot.querySelector('calc-screen');
 
-    screen.setAttribute('val', val);
-  }
-
-  updateScreen() {
-    const screen = this.shadowRoot.querySelector('calc-screen');
-    const screenTop = screen.querySelector('.screen__view--top');
-    const screenBottom = screen.querySelector('.screen__view--bottom');
-    const { val } = this.state;
-
-    screenTop.innerText = val;
-    screenBottom.innerText = addbits(val);
+    screen.setAttribute('val', calcStringController(val));
+    screen.setAttribute('val-str', val);
   }
 
   calculation(e) {
@@ -80,7 +101,7 @@ class Calculator extends WebcomponentMaster {
         this.modifyValue(val);
       } else if (target.classList.contains('btn--equal')) {
         let { val } = this.state;
-        val = addbits(val);
+        val = calcStringEval(val);
         this.modifyValue(val);
       } else if (target.classList.contains('btn--clear')) {
         this.modifyValue('');

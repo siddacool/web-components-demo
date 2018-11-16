@@ -1,3 +1,4 @@
+import * as math from 'mathjs';
 import WebcomponentMaster from './WebcomponentMaster';
 
 function addbits(s) {
@@ -13,6 +14,17 @@ function addbits(s) {
   }
 
   return toReturn.toString();
+}
+
+function calcStringEval(s) {
+  let evalStr = '';
+
+  if (s !== '') {
+    evalStr = math.eval(s);
+    evalStr = evalStr.toString();
+  }
+
+  return evalStr;
 }
 
 class CalcScreen extends WebcomponentMaster {
@@ -55,21 +67,28 @@ class CalcScreen extends WebcomponentMaster {
   }
 
   static get observedAttributes() {
-    return ['val'];
+    return ['val', 'val-str'];
   }
 
-  updateScreen(newValue) {
-    const screenTop = this.shadowRoot.querySelector('.screen__view--top');
+  updateScreenBottom(newValue) {
     const screenBottom = this.shadowRoot.querySelector('.screen__view--bottom');
     const val = newValue;
 
+    screenBottom.innerText = calcStringEval(val);
+  }
+
+  updateScreenTop(newValue) {
+    const screenTop = this.shadowRoot.querySelector('.screen__view--top');
+    const val = newValue;
+
     screenTop.innerText = val;
-    screenBottom.innerText = addbits(val);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'val') {
-      this.updateScreen(newValue);
+      this.updateScreenBottom(newValue);
+    } else if (name === 'val-str') {
+      this.updateScreenTop(newValue);
     }
   }
 }
