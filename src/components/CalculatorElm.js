@@ -22,7 +22,24 @@ class Calculator extends WebcomponentMaster {
     this.state = {
       val: '',
       digitArr: ['7', '8', '9', '4', '5', '6', '1', '2', '3', '.', '0'],
-      calcArr: ['&#x00F7', '&#x00D7', '-', '+'],
+      calcArr: [
+        {
+          symbol: '&#x00F7',
+          value: '/',
+        },
+        {
+          symbol: '&#x00D7',
+          value: '*',
+        },
+        {
+          symbol: '-',
+          value: '-',
+        },
+        {
+          symbol: '+',
+          value: '+',
+        },
+      ],
     };
   }
 
@@ -33,13 +50,13 @@ class Calculator extends WebcomponentMaster {
   modifyValue(valNew) {
     this.state.val = valNew;
     const { val } = this.state;
-    const screen = this.querySelector('calc-screen');
+    const screen = this.shadowRoot.querySelector('calc-screen');
 
     screen.setAttribute('val', val);
   }
 
   updateScreen() {
-    const screen = this.querySelector('calc-screen');
+    const screen = this.shadowRoot.querySelector('calc-screen');
     const screenTop = screen.querySelector('.screen__view--top');
     const screenBottom = screen.querySelector('.screen__view--bottom');
     const { val } = this.state;
@@ -51,10 +68,11 @@ class Calculator extends WebcomponentMaster {
   calculation(e) {
     e.preventDefault();
     if (e.target) {
-      const { target } = e;
+      const target = e.composedPath()[0];
       if (target.classList.contains('btn--digit') || target.classList.contains('btn--calc')) {
         let { val } = this.state;
-        val += target.innerText;
+        const getVal = target.getAttribute('value') || target.innerText;
+        val += getVal;
         this.modifyValue(val);
       } else if (target.classList.contains('btn--del')) {
         let { val } = this.state;
@@ -72,7 +90,72 @@ class Calculator extends WebcomponentMaster {
 
   connectedCallback() {
     const { digitArr, calcArr, val } = this.state;
-    this.innerHTML = `
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const style = `
+      :host {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .btn-grp {
+        display: flex;
+        height: 70vh;
+      }
+
+      .btn-grp__digit {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .btn-grp__calc {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+      }
+
+      .btn {
+        background-color: #f5f5f5;
+        border: 1px solid #efefef;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: .4px;
+        padding: 8px 10px;
+      }
+
+      .btn-grp__digit .btn {
+        display: inline-block;
+        width: 33.333%;
+      }
+
+      .btn-grp__calc .btn {
+        height: 17%;
+      }
+
+      @media only screen 
+      and (min-width: 1025px) { 
+        :host {
+          margin-top: 50px;
+          max-width: 300px;
+        }
+
+        .btn-grp {
+          height: 300px;
+        }
+      }
+    `;
+    shadowRoot.innerHTML = `
+      <style>${style}</style>
       <calc-screen val="${val}"></calc-screen>
       <div class="btn-grp">
         <div class="btn-grp__digit">
@@ -80,7 +163,7 @@ class Calculator extends WebcomponentMaster {
           <a href="#" class="btn btn--del">DEL</a>
         </div>
         <div class="btn-grp__calc">
-          ${calcArr.map(c => `<a href="#" class="btn btn--calc">${c}</a>`).join('')}
+          ${calcArr.map(c => `<a href="#" class="btn btn--calc" value="${c.value}">${c.symbol}</a>`).join('')}
           <a href="#" class="btn btn--equal">=</a>
           <a href="#" class="btn btn--clear">C</a>
         </div>
