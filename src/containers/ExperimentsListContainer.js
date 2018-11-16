@@ -1,6 +1,4 @@
-import Logo from '../components/Logo';
 import ExperimentsList from './ExperimentsList';
-import { title } from '../project.json';
 
 function makeListFromRoutes(route) {
   let toReturn = '';
@@ -16,12 +14,16 @@ function makeListFromRoutes(route) {
 export default function () {
   return `
     <div class="home-container">
-      ${Logo()}
-      <h2>This is</h3>
-      <h1>${title}</h1>
-      <ul>
-        ${ExperimentsList.map(r => makeListFromRoutes(r)).join('')}
-      </ul>
+      <div class="container">
+        <h1>Experiments in WebComponent</h1>
+        <p class="small">* Please enable ShadowDOM display in your browser for advanced element inspection</p>
+      </div>
+      <div class="container">
+        <p>Here is a list of Experiments created to demonstrate the power of webComponents.</p>
+        <ul>
+          ${ExperimentsList.map(r => makeListFromRoutes(r)).join('')}
+        </ul>
+      </div>
     </div>
   `;
 }
