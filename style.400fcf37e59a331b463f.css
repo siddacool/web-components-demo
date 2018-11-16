@@ -1,0 +1,109 @@
+body {
+  border: 0;
+  color: #000;
+  font-family: "segoe ui", Helvatica, arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  outline: none;
+  padding: 0;
+  min-width: 100%;
+  overflow: hidden;
+  overflow-y: auto; }
+
+* {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  background: none;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-decoration: none; }
+
+a {
+  color: inherit;
+  margin: 0;
+  text-decoration: none; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+:focus {
+  outline: 0; }
+
+a svg,
+button svg,
+label svg {
+  pointer-events: none; }
+
+.icon {
+  fill: #000;
+  height: 1rem;
+  width: 1rem; }
+
+.svg-holder {
+  display: none; }
+
+.home-container {
+  padding-top: 50px; }
+  .home-container h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem; }
+  .home-container h2 {
+    font-size: 2rem;
+    font-weight: bold; }
+  .home-container .btn {
+    border-radius: 5px;
+    font-size: 2rem;
+    max-width: 500px;
+    text-align: center; }
+  .home-container .logo {
+    display: block;
+    margin-bottom: 2rem;
+    max-width: 100px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
+    .home-container .logo img {
+      display: block;
+      height: auto;
+      width: 100%; }
+  .home-container .container {
+    background-color: #f8f9f9;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    padding: 1.5rem 1rem; }
+  .home-container p {
+    font-size: 1.1rem;
+    margin-bottom: 10px; }
+    .home-container p.small {
+      font-size: .9rem; }
+  .home-container ul {
+    left: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: calc(100% - 3rem);
+    position: relative; }
+    .home-container ul li {
+      font-size: 1.1rem;
+      font-weight: 600; }
+
