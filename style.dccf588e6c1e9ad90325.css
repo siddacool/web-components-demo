@@ -58,6 +58,7 @@ label svg {
   display: none; }
 
 .home-container {
+  display: block;
   padding-top: 50px; }
   .home-container h1 {
     font-size: 1.7rem;
