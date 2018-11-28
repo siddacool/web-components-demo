@@ -10,7 +10,7 @@ const ExperimentsList = [
   },
   {
     path: 'calculator',
-    title: 'Calculator',
+    title: 'Imperfect Calculator',
     view: CalculatorContainer,
   },
 ];

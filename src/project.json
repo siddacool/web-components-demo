@@ -4,5 +4,5 @@
   "description": "Experiments created with Web Components",
   "themeColor": "#ffffff",
   "backgroundColor": "#ffffff",
-  "isPwa": false
+  "isPwa": true
 }

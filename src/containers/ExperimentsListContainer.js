@@ -1,3 +1,4 @@
+import '../components/WebcomponentDempApp';
 import ExperimentsList from './ExperimentsList';
 
 function makeListFromRoutes(route) {
@@ -13,7 +14,7 @@ function makeListFromRoutes(route) {
 
 export default function () {
   return `
-    <div class="home-container">
+    <webcomponent-demp-app class="home-container">
       <div class="container">
         <h1>Experiments in WebComponent</h1>
         <p class="small">* Please enable ShadowDOM display in your browser for advanced element inspection</p>
@@ -24,6 +25,6 @@ export default function () {
           ${ExperimentsList.map(r => makeListFromRoutes(r)).join('')}
         </ul>
       </div>
-    </div>
+    </webcomponent-demp-app>
   `;
 }
