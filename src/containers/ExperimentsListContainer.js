@@ -1,4 +1,5 @@
 import '../components/WebcomponentDempApp';
+import '../components/StarRateIt';
 import ExperimentsList from './ExperimentsList';
 
 function makeListFromRoutes(route) {
@@ -20,9 +21,18 @@ export default function () {
         <p class="small">* Please enable ShadowDOM display in your browser for advanced element inspection</p>
       </div>
       <div class="container">
-        <p>Here is a list of Experiments created to demonstrate the power of webComponents.</p>
+        <p>These components utilizes fullpage so click to check em'</p>
         <ul>
           ${ExperimentsList.map(r => makeListFromRoutes(r)).join('')}
+        </ul>
+      </div>
+      <div class="container">
+        <p>The little ones</p>
+        <ul>
+          <li>
+            <section>Star Rate It</section>
+            <star-rate-it value="2"></star-rate-it>
+          </li>
         </ul>
       </div>
     </webcomponent-demp-app>
