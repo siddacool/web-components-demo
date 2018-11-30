@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "0a6f5e9491b4136688d8613d275c4362",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/favicon.ico"
+    "revision": "b0854133797bc3a20b884c32125d7793",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-320x460.png"
   },
   {
-    "url": "style.dccf588e6c1e9ad90325.css"
+    "url": "style.1b286dcdce99946c660d.css"
   },
   {
     "revision": "d42dd0732b85d5efa9e1660a1747b05c",
@@ -15,8 +15,8 @@ self.__precacheManifest = [
     "url": "vendor/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"
   },
   {
-    "revision": "09193fe3d48a01baba451d254e24270c",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-640x920.png"
+    "revision": "9b8c9ba1ffd8d0f4583aea58b981fcbe",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-640x1096.png"
   },
   {
     "revision": "368d99b0c47fb3b0eb6738f2897484d2",
@@ -99,20 +99,20 @@ self.__precacheManifest = [
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/favicon-32x32.png"
   },
   {
-    "revision": "7aa4be635265fa0b420cf136ed519784",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1496x2048.png"
+    "revision": "0a6f5e9491b4136688d8613d275c4362",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/favicon.ico"
   },
   {
-    "revision": "b0854133797bc3a20b884c32125d7793",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-320x460.png"
+    "revision": "8a233ecc4a55708af47301e3d0cad3e9",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1536x2008.png"
+  },
+  {
+    "revision": "09193fe3d48a01baba451d254e24270c",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-640x920.png"
   },
   {
     "revision": "f938860f2f2cdc7ef587f2bb80925e0c",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/android-chrome-96x96.png"
-  },
-  {
-    "revision": "9b8c9ba1ffd8d0f4583aea58b981fcbe",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-640x1096.png"
   },
   {
     "revision": "1f78fe0e6b0e813eb56beee5219da077",
@@ -135,12 +135,12 @@ self.__precacheManifest = [
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1242x2148.png"
   },
   {
-    "revision": "8a233ecc4a55708af47301e3d0cad3e9",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1536x2008.png"
+    "revision": "7aa4be635265fa0b420cf136ed519784",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1496x2048.png"
   },
   {
-    "revision": "249507a9450fc8b593ed022b55b788db",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/android-chrome-48x48.png"
+    "revision": "dba69c6bfa4d7a84f6eac3dfdebbab2d",
+    "url": "./index.html"
   },
   {
     "url": "icon_96x96.ab0524bbff11203c442020e3ff372a3f.png"
@@ -162,12 +162,16 @@ self.__precacheManifest = [
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/android-chrome-144x144.png"
   },
   {
-    "revision": "0e3da23ce89b9b69cf5a0fdb53b0bbbc",
+    "revision": "9b3b9dc8f144f4cb9401a83ddf239c83",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/.cache"
   },
   {
     "revision": "946d2bf39575fb415a2d8a0edab46711",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/android-chrome-36x36.png"
+  },
+  {
+    "revision": "249507a9450fc8b593ed022b55b788db",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/android-chrome-48x48.png"
   },
   {
     "revision": "a0373a80bf3f85406ca40b33a0ce656d",
@@ -189,10 +193,14 @@ self.__precacheManifest = [
     "url": "icon_128x128.98c72924d2cc5c2cfaebec0713769bb9.png"
   },
   {
-    "url": "app.f9d14d5f33fb4be0e6ec.js"
+    "revision": "053674ac9a72826ce25027d6d1a08f9c",
+    "url": "assets/images/DSC_7865-edit-c-053674ac.jpg"
   },
   {
-    "revision": "559f823eed90f7ea61d7459c27778cae",
-    "url": "./index.html"
+    "revision": "d3050f7c57c64d3210f3a8570020c177",
+    "url": "assets/images/DSC_1173-Edit-tagged-d3050f7c.jpg"
+  },
+  {
+    "url": "app.a6ee4e91c8b3fe4119b4.js"
   }
 ];

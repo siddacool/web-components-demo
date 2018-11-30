@@ -92,7 +92,7 @@ label svg {
     margin: 0 auto;
     margin-bottom: 1rem;
     max-width: 700px;
-    padding: 1.5rem 1rem; }
+    padding: 1rem; }
   .home-container p {
     font-size: 1.1rem;
     margin-bottom: 10px; }
@@ -100,11 +100,13 @@ label svg {
       font-size: .9rem; }
   .home-container ul {
     left: 30px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
     max-width: calc(100% - 3rem);
     position: relative; }
     .home-container ul li {
       font-size: 1.1rem;
       font-weight: 600; }
+    .home-container ul section {
+      margin-bottom: 10px; }
 
