@@ -1,5 +1,6 @@
 import NoExperimentsContainer from './NoExperimentsContainer';
 import CalculatorContainer from './CalculatorContainer';
+import ResponsiveImageContainer from './ResponsiveImageContainer';
 
 const ExperimentsList = [
   {
@@ -12,6 +13,11 @@ const ExperimentsList = [
     path: 'calculator',
     title: 'Imperfect Calculator',
     view: CalculatorContainer,
+  },
+  {
+    path: 'responsiveimage',
+    title: 'Responsive Image',
+    view: ResponsiveImageContainer,
   },
 ];
 
