@@ -1,6 +1,6 @@
 import WebcomponentMaster from './WebcomponentMaster';
 
-class ResponsiveImage extends WebcomponentMaster {
+export default class extends WebcomponentMaster {
   constructor() {
     super('responsive-image');
 
@@ -67,5 +67,3 @@ class ResponsiveImage extends WebcomponentMaster {
     }
   }
 }
-
-customElements.define('responsive-image', ResponsiveImage);

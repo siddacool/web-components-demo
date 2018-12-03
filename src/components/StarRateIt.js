@@ -1,6 +1,6 @@
 import WebcomponentMaster from './WebcomponentMaster';
 
-class StarRateIt extends WebcomponentMaster {
+export default class extends WebcomponentMaster {
   constructor() {
     super('star-rate-it');
     this.state = {
@@ -168,5 +168,3 @@ class StarRateIt extends WebcomponentMaster {
     });
   }
 }
-
-customElements.define('star-rate-it', StarRateIt);

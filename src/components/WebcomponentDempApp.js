@@ -1,7 +1,5 @@
-class WebcomponentDempApp extends HTMLElement {
+export default class extends HTMLElement {
   constructor() {
     super('webcomponent-demp-app');
   }
 }
-
-customElements.define('webcomponent-demp-app', WebcomponentDempApp);

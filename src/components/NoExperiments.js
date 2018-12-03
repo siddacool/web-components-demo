@@ -1,6 +1,6 @@
 import WebcomponentMaster from './WebcomponentMaster';
 
-class NoExperiments extends WebcomponentMaster {
+export default class extends WebcomponentMaster {
   constructor() {
     super('no-experiments');
   }
@@ -16,5 +16,3 @@ class NoExperiments extends WebcomponentMaster {
     `;
   }
 }
-
-customElements.define('no-experiments', NoExperiments);

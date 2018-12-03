@@ -2,21 +2,6 @@ import * as math from 'mathjs';
 import WebcomponentMaster from './WebcomponentMaster';
 import './CalcScreen';
 
-function addbits(s) {
-  let toReturn = '';
-
-  if (s && s !== '') {
-    const str = s.toString();
-    toReturn = (str.replace(/\s/g, '')
-      .match(/[+\-]?([0-9\.]+)/g) || [])
-      .reduce((sum, value) => {
-        return parseFloat(sum) + parseFloat(value);
-      });
-  }
-
-  return toReturn.toString();
-}
-
 function calcStringController(s) {
   let str = s;
   let evalStr = '';
@@ -46,7 +31,7 @@ function calcStringEval(s) {
   return evalStr;
 }
 
-class Calculator extends WebcomponentMaster {
+export default class extends WebcomponentMaster {
   constructor() {
     super('calculator-elm');
     this.state = {
@@ -196,5 +181,3 @@ class Calculator extends WebcomponentMaster {
     });
   }
 }
-
-customElements.define('calculator-elm', Calculator);

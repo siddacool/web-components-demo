@@ -1,5 +1,3 @@
-import '../components/WebcomponentDempApp';
-import '../components/ResponsiveImage';
 import photo from '../images/DSC_7865-edit-c.jpg';
 import photo2 from '../images/DSC_1173-Edit-tagged.jpg';
 
