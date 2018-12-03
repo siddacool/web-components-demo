@@ -1,21 +1,6 @@
 import * as math from 'mathjs';
 import WebcomponentMaster from './WebcomponentMaster';
 
-function addbits(s) {
-  let toReturn = '';
-
-  if (s && s !== '') {
-    const str = s.toString();
-    toReturn = (str.replace(/\s/g, '')
-      .match(/[+\-]?([0-9\.]+)/g) || [])
-      .reduce((sum, value) => {
-        return parseFloat(sum) + parseFloat(value);
-      });
-  }
-
-  return toReturn.toString();
-}
-
 function calcStringEval(s) {
   let evalStr = '';
 
