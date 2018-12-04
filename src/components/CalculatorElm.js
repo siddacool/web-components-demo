@@ -160,9 +160,11 @@ export default class extends WebcomponentMaster {
         }
       }
     `;
+
     shadowRoot.innerHTML = `
       <style>${style}</style>
-      <calc-screen val="${val}"></calc-screen>
+      <div class="screen">
+      </div>
       <div class="btn-grp">
         <div class="btn-grp__digit">
           ${digitArr.map(d => `<a href="#" class="btn btn--digit">${d}</a>`).join('')}
@@ -175,6 +177,11 @@ export default class extends WebcomponentMaster {
         </div>
       </div>
     `;
+
+    const screen = this.shadowRoot.querySelector('.screen');
+    const calcScreen = document.createElement('calc-screen');
+    calcScreen.setAttribute('val', val);
+    screen.appendChild(calcScreen);
 
     this.addEventListener('click', (e) => {
       this.calculation(e);
