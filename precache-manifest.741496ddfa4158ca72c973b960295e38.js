@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-320x460.png"
   },
   {
-    "url": "style.b7e62a4ee1f40692fb3a.css"
+    "url": "style.8cc80506de01d52d9a05.css"
   },
   {
     "revision": "d42dd0732b85d5efa9e1660a1747b05c",
@@ -119,27 +119,27 @@ self.__precacheManifest = [
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-748x1024.png"
   },
   {
-    "revision": "cbd272ba90d6115b19207dd05add0d59",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-768x1004.png"
-  },
-  {
     "revision": "1bfe90f33bb18847dd106c9e05d56a3c",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-750x1294.png"
   },
   {
-    "revision": "5bed520c367a155ed742879ba23c454b",
-    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1182x2208.png"
+    "revision": "cbd272ba90d6115b19207dd05add0d59",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-768x1004.png"
   },
   {
     "revision": "2c78e3738fddf205883666936e927f7a",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1242x2148.png"
   },
   {
+    "revision": "5bed520c367a155ed742879ba23c454b",
+    "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1182x2208.png"
+  },
+  {
     "revision": "7aa4be635265fa0b420cf136ed519784",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/apple-touch-startup-image-1496x2048.png"
   },
   {
-    "revision": "b68307a71070c14c9d0715ad55d2293a",
+    "revision": "2578f56d69254a494451a9df24f16882",
     "url": "./index.html"
   },
   {
@@ -162,7 +162,7 @@ self.__precacheManifest = [
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/android-chrome-144x144.png"
   },
   {
-    "revision": "3eded9789523a450ab8e59e56c80c5b3",
+    "revision": "0a3b70e186dbb0630baad4545101be63",
     "url": "icons-0f20d2669e4e9f9be316314f73d77602/.cache"
   },
   {
@@ -201,6 +201,6 @@ self.__precacheManifest = [
     "url": "assets/images/DSC_1173-Edit-tagged-d3050f7c.jpg"
   },
   {
-    "url": "app.78ef9464f3e53433956c.js"
+    "url": "app.aff3776b2fcf49d33b7b.js"
   }
 ];
